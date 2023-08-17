@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body,input, button, select, textarea{
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #E5E5E5;
+}
+
+
+body::before{
+  content: '';
+width: 100%; /* largura da caixa preta*/
+height: 368px; /* este é o tamanho da caixa preta */
+
+position: absolute; /*este vai definir a posição da caixa preta */
+top: 0; /* este aqui é para a borda ficar completa tocando nos canto*/
+left: 0; /* este aqui é para a borda preencher os cantos tambem */
+z-index: -1; /* este aqui vai sobrepor a palavra sobre o fundo preto*/
+background: #121214;
+}
+
+.page{
+  width: 736px; /*este vai ser o tamanho da caixa que vai os dados para preencher*/
+  margin: auto;
+}
+
+header{
+  width: 319px; /* este é o tamanho da caixa que fica o titulo da pagina e o subtitulo e vai coloca no canto */
+  margin-top: 74px; /* este é o espaçamento do topo ate o titulo */
+}
+
+header h1 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold; /* peso da fonte */
+  font-size: 36px;  /* tamanho do texto */
+  line-height: 42px; /* largura da fonte */
+  color: white; 
+
+  margin-bottom: 24px; /* este aqui da espaçamento do titulo e do subtitulo*/
+}
+
+header p{
+  font-family:'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #42D3FF;
+}
+
+form{
+  margin-top: 38px; /* este aqui é a distancia entre o subtitulo e a caixa do form que fica logo abaixo*/
+  background: #FAFAFC;
+  border-radius: 8px; /* este aqui é um pequeno espaço entre a caixa e o texto link do evento e os outros tmb*/
+  min-height: 300px;
+  padding: 64px; /* este vai ser o prenchimento interno de todos os 4 lados*/
+}
+
+fieldset{
+  border: none; /* este aqui vai tirar a borda que ja vem padrão do fieldset*/
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fieldset-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* este aqui é para colocar uma distancia de uma caixa a outra*/
+}
+
+fieldset legend{
+ font-family: 'Archivo', sans-serif;
+ font-weight: 600; /* este é o peso */
+ font-size: 24px;  /*este é o tamanho da fonte que esta escrito dentro do legend*/
+ line-height: 34px; /* este é a largura da fonte*/
+
+ width: 100%; /* este é a largura da linha */
+ border-bottom: 1px solid #E6E6F0;; /* este é o tamanho da linha*/
+ padding-bottom: 16px; /* aqui vai ser o espaçamento da linha e do texto informaçoes do evento*/
+}
+
+.input-wrapper{
+  display: flex; /* este e o debaixo serve para colocar a caixa debaixo do titulo */
+  flex-direction: column;
+}
+
+.input-wrapper label{
+  font-size: 14px;
+  line-height: 24px;
+  color: #4E4958;
+  margin-bottom: 8px; /* este da um espaçamento da mensagem e da caixa*/
+}
+
+/* aqui vai arrumar tudo que esta na tag span */
+.input-wrapper label span{
+  margin-left: 12px; /* este aqui é para dar um espaçamento da mensagem "titulo do evento" do que esta entre paretese*/
+  font-size: 12px; /* este é da fonte da mensagem que esta no span*/
+  line-height: 20px; /* este é da fonte da mensagem que esta no span*/
+  color: #b7b4bd;
+}
+
+.input-wrapper label span:hover {
+  color: #6c6a71;
+}
+
+/* aqui é a configuração da caixa que fica embaixo do titulo do evento*/
+ .input-wrapper input,
+ .input-wrapper textarea,
+ .input-wrapper select {
+  background: #FAFAFC;
+
+  border: 1px solid #6c6a71;
+  border-radius: 8px;/* aqui é o arrendodamento dessa borda */
+
+  
+  height: 56px; /* altura da caixa*/
+  padding: 0 24px;
+
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.input-wrapper textarea{
+  padding: 0;
+  height: 168px;
+}
+
+/*este aqui serve para remover a setinha e adiconar aqui esta no figma*/
+.input-wrapper select{
+  appearance: none;
+  -webkit-appearance: none; /* este aqui vai remover a setinha de varios tipos de navegadores*/
+
+  /* este abaixo serve para colocar a imagem em formaato de texto */
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat; /* este aqui não vai haver repetiição da imagem a cima */
+  background-position: right 24px top 50%; /* aqui right é a posição da seta que é a direita, 24 o seu tamanho e 50 é a porcentagem que vai centralizar, bem no meio*/
+}
